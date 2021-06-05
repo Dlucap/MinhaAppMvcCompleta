@@ -1,0 +1,3 @@
+ install-package Microsoft.EntityFrameworkCore.SqlServer
+ 
+ cmd: script-migration -Context MeuDBContext
