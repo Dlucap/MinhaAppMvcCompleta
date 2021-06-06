@@ -1,6 +1,7 @@
 ﻿using AppMvcBasica.Models;
 using Microsoft.AspNetCore.Http;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,16 +13,21 @@ namespace DevIO.App.ViewModels
     [Key]
     public Guid Id { get; set; }
 
+    [DisplayName("Fornecedor")]
     [Required(ErrorMessage = "O campo {0} é obrigatório")]
-    [StringLength(200, ErrorMessage = "O campo`{0} precisa ter entre {2} e {1} caracteres", MinimumLength = 10)]
+    public Guid FornecedorId { get; set; }
+
+    [Required(ErrorMessage = "O campo {0} é obrigatório")]
+    [StringLength(200, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 5)]
     public string Nome { get; set; }
 
     [DisplayName("Descrição")]
     [Required(ErrorMessage = "O campo {0} é obrigatório")]
-    [StringLength(1000, ErrorMessage = "O campo`{0} precisa ter entre {2} e {1} caracteres", MinimumLength = 10)]
+    [StringLength(1000, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 10)]
     public string Descricao { get; set; }
 
-    public IFormFile ImagemUpLoad { get; set; }
+    [DisplayName("Imagem do Produto")]
+    public IFormFile ImagemUpload { get; set; }
        
     public string Imagem { get; set; }
 
@@ -35,6 +41,8 @@ namespace DevIO.App.ViewModels
     [DisplayName("Ativo?")]
     public bool Ativo { get; set; }
 
-    public Fornecedor Fornecedor { get; set; }
+    public FornecedorViewModel Fornecedor { get; set; }
+
+    public IEnumerable<FornecedorViewModel> Fornecedores { get; set; }
   }
 }

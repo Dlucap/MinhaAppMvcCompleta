@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DevIO.App.ViewModels
 {
@@ -38,6 +35,6 @@ namespace DevIO.App.ViewModels
     [StringLength(50, ErrorMessage = "O campo`{0} precisa ter entre {2} e {1} caracteres", MinimumLength = 2)]
     public string Estado { get; set; }
     [HiddenInput]
-    public Guid Fornecedor { get; set; }
+    public Guid FornecedorId { get; set; }
   }
 }
