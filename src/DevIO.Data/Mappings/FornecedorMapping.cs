@@ -1,11 +1,6 @@
 ﻿using AppMvcBasica.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIO.Data.Mappings
 {
@@ -17,7 +12,7 @@ namespace DevIO.Data.Mappings
 
       builder.Property(f => f.Nome)
               .IsRequired()
-              .HasColumnType("varchar(20)");
+              .HasColumnType("varchar(100)");
 
       builder.Property(f => f.Documento)
               .IsRequired()

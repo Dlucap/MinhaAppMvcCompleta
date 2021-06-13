@@ -88,7 +88,7 @@ namespace DevIO.Data.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .IsUnicode(false)
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<int>("TipoFornecedor")
                         .HasColumnType("int");

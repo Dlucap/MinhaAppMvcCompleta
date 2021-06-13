@@ -12,7 +12,7 @@ namespace DevIO.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Nome = table.Column<string>(type: "varchar(20)", unicode: false, nullable: false),
+                    Nome = table.Column<string>(type: "varchar(100)", unicode: false, nullable: false),
                     Documento = table.Column<string>(type: "varchar(14)", unicode: false, nullable: false),
                     TipoFornecedor = table.Column<int>(type: "int", nullable: false),
                     Ativo = table.Column<bool>(type: "bit", nullable: false)
