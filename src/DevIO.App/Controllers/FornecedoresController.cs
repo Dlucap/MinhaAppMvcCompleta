@@ -5,7 +5,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using DevIO.App.ViewModels;
 using Microsoft.AspNetCore.Authorization;
-using AppMvcBasica.Models;
+using DevIO.Business.Models;
 using DevIO.Business.Interfaces;
 
 namespace DevIO.App.Controllers
@@ -49,7 +49,8 @@ namespace DevIO.App.Controllers
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(FornecedorViewModel fornecedorViewModel)
     {
-      if (!ModelState.IsValid) return View(fornecedorViewModel);
+      if (!ModelState.IsValid) 
+        return View(fornecedorViewModel);
 
       var fornecedor = _mapper.Map<Fornecedor>(fornecedorViewModel);
       await _fornecedorRepository.Adicionar(fornecedor);

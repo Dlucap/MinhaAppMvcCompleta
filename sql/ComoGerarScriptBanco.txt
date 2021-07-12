@@ -1,3 +1,6 @@
  install-package Microsoft.EntityFrameworkCore.SqlServer
  
  cmd: script-migration -Context MeuDBContext
+ 
+ desafio https://github.com/Pleiterson/desafios-bootcamps-dio/edit/master/README.md
+ https://github.com/chsakell/aspnet-core-identity
