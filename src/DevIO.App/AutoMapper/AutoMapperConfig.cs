@@ -8,6 +8,7 @@ namespace DevIO.App.AutoMapper
   {
     public AutoMapperConfig()
     {
+      //ReserveMap serve para mapear tando de Fornecedor para FornecedorViewModel quanto o contrário;
       CreateMap<Fornecedor, FornecedorViewModel>().ReverseMap();
       CreateMap<Endereco, EnderecoViewModel>().ReverseMap();
       CreateMap<Produto, ProdutoViewModel>().ReverseMap();

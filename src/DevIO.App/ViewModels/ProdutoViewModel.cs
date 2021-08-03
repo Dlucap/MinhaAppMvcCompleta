@@ -1,4 +1,5 @@
-﻿using DevIO.Business.Models;
+﻿using DevIO.App.Extensions;
+using DevIO.Business.Models;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,8 @@ namespace DevIO.App.ViewModels
        
     public string Imagem { get; set; }
 
+    //Data Annotation da extension de validação;
+    [Moeda] 
     [Required(ErrorMessage = "O campo {0} é obrigatório")]
     [Column(TypeName = "decimal(18,4)")]
     public decimal Valor { get; set; }
